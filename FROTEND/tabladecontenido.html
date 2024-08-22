@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conjunto de datos</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body bgcolor="blue">
+
+<div class="container">
+    <div id="cuadroinformativo"></div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#cuadroinformativo').load('Complementos/cuadroinformativo.php');
+});
+
+// Aquí faltaba definir los IDs y también estaba llamando una función que no existe
+$('#agregar').click(function(){
+    // Supongo que aquí debes recoger los datos, pero faltan los IDs de los elementos HTML
+    id=$('#campoid').val();
+    nombrepelicula=  $('#nombrepelicula').val();
+    descripcionpelicula=  $('#descripcionpelicula').val();
+    generopelicula=  $('#generopelicula').val();
+    fechapelicula=  $('#fechapelicula').val();
+    duracionpelicula=  $('#duracionpelicula').val();
+    imagenpelicula=  $('#imagenpelicula').val();
+    videopelicula=  $('#videopelicula').val();
+
+    // Supongo que aquí querías llamar a una función llamada actualizaDatos, así que la corregí
+    actualizaDatos(nombrepelicula, descripcionpelicula, generopelicula, fechapelicula, duracionpelicula, imagenpelicula, videopelicula);
+});
+</script>
+
+</body>
+</html>
